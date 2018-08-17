@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">p4MusicApp</string>
+    <string name="apptitle">music playing app</string>
+    <string name="allsongstitle">All songs</string>
+    <string name="nowplayingtitle">Now playing</string>
+    <string name="artistname">artist</string>
+    <string name="songtitle">title</string>
+</resources>
