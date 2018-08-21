@@ -7,6 +7,25 @@ should be player.
 images' source: https://material.io/tools/icons/?icon=play_arrow&style=baseline
 the source of the empty album image is from the internet.
 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/backToMainM"
+        android:clickable="true"
+        android:layout_height="wrap_content"
+        android:text="Back to the main menu"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backToMainM"
+        android:layout_centerHorizontal="true"
+        android:text="Now playing"
+        android:textSize="24dp"
+        android:textColor="@color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

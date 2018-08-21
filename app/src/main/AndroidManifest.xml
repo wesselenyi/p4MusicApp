@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.android.p4musicapp">
 
     <application
@@ -11,15 +12,18 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"
+                    android:label="Music player"/>
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".AllSongsActivity"
-            android:label="Songs"/>
+            android:parentActivityName=".MainActivity"
+            android:label="All songs"/>
         <activity android:name=".NowPlaying"
-            android:label="Songs"/>
+            android:label="Now playing"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

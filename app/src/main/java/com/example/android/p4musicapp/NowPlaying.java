@@ -2,7 +2,9 @@ package com.example.android.p4musicapp;
 
 import android.os.Bundle;
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -19,10 +21,18 @@ public class NowPlaying extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         // Set the content of the activity to use the now_paying.xml layout file
         setContentView(R.layout.now_playing);
 
-// ide valahogy kell egy if függvény különben kifagy az app
+        TextView backToMainM =(TextView) findViewById(R.id.backToMainM);
+        backToMainM.setOnClickListener(new View.OnClickListener() {
+            // This is the back action to the main menu
+            @Override
+            public void onClick(View view) {
+                Intent backMIntent = new Intent(NowPlaying.this, MainActivity.class);
+                startActivity(backMIntent);
+            }});
 
         Intent intent = getIntent();
         Songstwo songs = intent.getParcelableExtra("Playing");

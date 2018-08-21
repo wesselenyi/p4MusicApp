@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(allsongsIntent);
             }
 
-            ;
+
         });
 
         // Find the View that shows the currently played song in the player

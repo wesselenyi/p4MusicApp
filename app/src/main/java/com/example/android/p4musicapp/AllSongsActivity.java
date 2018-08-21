@@ -3,10 +3,13 @@ package com.example.android.p4musicapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -19,8 +22,18 @@ public class AllSongsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         //setContentView(R.layout.all_songs);
         setContentView(R.layout.song_list);
+        TextView backToMain =(TextView) findViewById(R.id.backToMain);
+        backToMain.setOnClickListener(new View.OnClickListener() {
+            // TThis is the back action to the main menu.
+            @Override
+            public void onClick(View view) {
+                Intent backIntent = new Intent(AllSongsActivity.this, MainActivity.class);
+                startActivity(backIntent);
+            }});
+
         //create a list of songs by using arraylist and custom adapter
         final ArrayList<Songstwo> songs = new ArrayList<Songstwo>();
         songs.add(new Songstwo("Foo fighters", "Bridge burning", R.drawable.foofighters_wl));
